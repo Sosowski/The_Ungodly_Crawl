@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	text-align:center;
+	font-family: 'Fondamento', serif;
+	margin-left: 200px;
+	margin-right: 200px;
+	background-color: #CC6;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+button {
+	font-family: 'Fondamento', serif;	
+}
+
+#textBox{
+	background-color: #CC9;
+}
+
+#picture {
+	background-color: #CC6;
+}
