@@ -3,20 +3,20 @@ function levelTwo(){
     statsToCookie();
 	document.getElementById("youtube").innerHTML="<iframe width='250' height='188' src='http://www.youtube.com/embed/0v829LHb4ys?autoplay=1' frameborder='0' autohide='1'></iframe>";
     document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
-    document.getElementById("picture").innerHTML="<img src='hawk.png'>";
+    document.getElementById("picture").innerHTML="<img src='Images/hawk.png'>";
     document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
     document.getElementById("textBox").innerHTML="Yeah, right! A giant hawk swoops out of the sky and grabs you and adorable game mascot in it's talons.<br>You black out, but soon awaken in a similar looking dungeon.<br>You mutter curses under your breath.";
     document.getElementById("buttonBar").innerHTML="<button type='button' onclick='Intro()'>Proceed</button>";
 }
 
 function Intro(){
-    document.getElementById("picture").innerHTML="<img src='mascotintro1.png'>";
+    document.getElementById("picture").innerHTML="<img src='Images/mascotintro1.png'>";
     document.getElementById("textBox").innerHTML="<b>Hey! Mister! You've gotta pay attention, because it only gets harder from here!</b>";
     document.getElementById("buttonBar").innerHTML="<button type='button' onclick='Intro2()'>Oh boy...</button>";
 }
 
 function Intro2(){
-    document.getElementById("picture").innerHTML="<img src='mascotintro2.png'>";
+    document.getElementById("picture").innerHTML="<img src='Images/mascotintro2.png'>";
     document.getElementById("inventory").innerHTML="<button type='button' onclick='Inventory()'>Inventory</button>";
     document.getElementById("textBox").innerHTML="<b>You now have an inventory window! Click that new button down there at any time to see your inventory!</b>";
     document.getElementById("buttonBar").innerHTML="<button type='button' onclick='Intro3()'>Okay...</button>";
@@ -25,7 +25,7 @@ function Intro2(){
 function Intro3(){
     health = healthCap;
     mana = manaCap;
-    document.getElementById("picture").innerHTML="<img src='mascotintro3.png'>";
+    document.getElementById("picture").innerHTML="<img src='Images/mascotintro3.png'>";
     document.getElementById("inventory").innerHTML="<button type='button' onclick='Inventory()'>Inventory</button>"
     document.getElementById("textBox").innerHTML="<b>Oh! And the fighting system is going to show up a lot here! Watch your health! I'm going to go find items for you!</b><br>With that he scampers off, like some sort of cat or something.<br>Your health and mana have been refilled!";
     document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Guess I'm on my own now</button>";
@@ -84,7 +84,7 @@ function crawl2(){
                 eAttack = 50 - (weakenRing*2);
                 eDodge = 5 - (weakenRing*2);
                 document.getElementById("tStats").innerHTML="Tiamat's Health : " + eHealth + " ";
-                document.getElementById("picture").innerHTML="<img src='tiamat2.png'>";
+                document.getElementById("picture").innerHTML="<img src='Images/tiamat2.png'>";
 		document.getElementById("textBox").innerHTML="As you revel in your achievements, a gigantic claw appears out of nowhere and tears reality asunder!<br>You are left facing a familiar foe..<br><b><font size='13'>TIAMAT, GODDESS OF THE DRAGONS!</font><br>'I HAVE HAD ENOUGH OF THIS CHARADE. YOU THINK YOU CAN JUST BEAT A GOD WITH A FEW MOUSECLICKS?<br>IT IS TIME TO PUT YOU IN YOUR PLACE. BOW TO ME, MORTAL, FOR I SHALL END YOUR LIFE.</b><br>You can't help but wonder what Tiamat did to look so different since the last area...";
 		if(swordflag == 1){
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='fightTiamat2()'>Fight!</button><button type='button' onclick='swordTiamat2()'>Use the old sword!</button>";
@@ -126,7 +126,7 @@ function crawl2(){
                 eName = "Gnoll";
                 eScore = 5;
                 document.getElementById("tStats").innerHTML=eName + "'s Health : " + eHealth + " ";
-		document.getElementById("picture").innerHTML="<img src='gnoll.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/gnoll.png'>";
 		document.getElementById("textBox").innerHTML="A Gnoll appears! Looks like he's in no mood for diplomacy!";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='fight()'>Fight!</button><button type='button' onclick='flee()'>Flee!</button>";
 		}
@@ -147,7 +147,7 @@ function crawl2(){
                 eName = "Ogre";
                 eScore = 15;
                 document.getElementById("tStats").innerHTML=eName + "'s Health : " + eHealth + " ";
-		document.getElementById("picture").innerHTML="<img src='ogre.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/ogre.png'>";
 		document.getElementById("textBox").innerHTML="An Ogre appears! You take some brief moments to wonder where you've gone wrong in your life.";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='fight()'>Fight!</button><button type='button' onclick='flee()'>Flee!</button>";
 		}
@@ -166,7 +166,7 @@ function crawl2(){
         //If player has 10 rings, don't give them any more. Toe rings aren't allowed.
         var ringRoll = Math.floor((Math.random()*100)+1);
         if(ringCount >= 10){
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
             document.getElementById("textBox").innerHTML="You found a ring, but...you already have a ring on every finger!<br> You leave it behind.";
             document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Aw, man.</button>";
         }
@@ -175,7 +175,7 @@ function crawl2(){
             ringCount++;
             dodge += 2;
             score += 2;
-			document.getElementById("picture").innerHTML="<img src='ringDodge.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/ringDodge.png'>";
             document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
             document.getElementById("textBox").innerHTML="You found a ring of dodging! You put it on, gaining +2 to dodge and 2 points!";
             document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Nimble!</button>";
@@ -186,7 +186,7 @@ function crawl2(){
             ringCount++;
             strength += 2;
             score += 2;
-			document.getElementById("picture").innerHTML="<img src='ringStrength.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/ringStrength.png'>";
             document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
             document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
             document.getElementById("textBox").innerHTML="You found a ring of strength! You put it on, gaining +2 to strength and 2 points!";
@@ -199,7 +199,7 @@ function crawl2(){
             mana += 2;
             manaCap += 2;
             score += 2;
-			document.getElementById("picture").innerHTML="<img src='ringMagic.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/ringMagic.png'>";
             document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
             document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
             document.getElementById("textBox").innerHTML="You found a ring of mana! You put it on, gaining +2 to mana and 2 points!";
@@ -209,7 +209,7 @@ function crawl2(){
         else if(ringRoll >= 61 && ringRoll <= 80){
             pointRing++;
             ringCount++;
-			document.getElementById("picture").innerHTML="<img src='ringScore.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/ringScore.png'>";
             document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
             document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
             document.getElementById("textBox").innerHTML="You found a ring of...points? You put it on, and will recieve 1 additional point every time you look for trouble!";
@@ -219,7 +219,7 @@ function crawl2(){
         else if(ringRoll >= 81 && ringRoll <= 100){
             weakenRing++;
             ringCount++;
-			document.getElementById("picture").innerHTML="<img src='ringWeaken.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/ringWeaken.png'>";
             document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
             document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
             document.getElementById("textBox").innerHTML="You found a ring of weakening! Look, before you freak out, this ring lowers enemy stats by 2! It's good, I swear!<br>You put it on.";
@@ -242,12 +242,12 @@ function crawl2(){
 			clearEventFlags();
 			event4 = 1;
 			if(enchantedIron==1 || swordflag2 == 1){
-				document.getElementById("picture").innerHTML="<img src='chestEmpty.png'>";
+				document.getElementById("picture").innerHTML="<img src='Images/chestEmpty.png'>";
 				document.getElementById("textBox").innerHTML="The tresure chest is just as you left it. Empty and disapointing.";
 				document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Aw...</button>";
 			}
 			else{
-				document.getElementById("picture").innerHTML="<img src='chest.png'>";
+				document.getElementById("picture").innerHTML="<img src='Images/chest.png'>";
 				document.getElementById("textBox").innerHTML="You've come across a treasure chest! Do you open it?";
 				document.getElementById("buttonBar").innerHTML="<button type='button' onclick='openIron()'>Yes</button><button type='button' onclick='denyChest()'>No</button>";	
 			}
@@ -264,10 +264,10 @@ function crawl2(){
 		else{
 			clearEventFlags();
 			event4 = 1;
-			document.getElementById("picture").innerHTML="<img src='dwarfBlacksmith.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/dwarfBlacksmith.png'>";
 			document.getElementById("textBox").innerHTML="You encounter a Dwarf working a forge. He's far more manly than the drunkard you met before.<br><b>Hail, traveler. My name is Urist McWeaponsmith. I am a world renown weaponsmith, if you didn't quite hear my name before.<br>If you've got a weapon and some metal, I can help you. I'm a tad dry on supplies lately.</b>";
 			if(swordflag2 == 1){
-				document.getElementById("picture").innerHTML="<img src='dwarfBlacksmithGone.png'>";
+				document.getElementById("picture").innerHTML="<img src='Images/dwarfBlacksmithGone.png'>";
 				document.getElementById("textBox").innerHTML="You go back to where the weaponsmith was, but find that he's left. You find a note on his anvil.<br><b>Dear adventurer,<br>I've decided that I can't make anything better than your sword, so I've decided to go into retirement. I apperciate everything you've done.<br>PS: Dungeons are a terrible place to live. Would not reccomend.</b>";
 				document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>What a nice fellow.</button>";
 			}
@@ -296,7 +296,7 @@ function crawl2(){
 		else{
 			clearEventFlags();
 			event5 = 1;
-			document.getElementById("picture").innerHTML="<img src='chest.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/chest.png'>";
 			document.getElementById("textBox").innerHTML="You've come across a treasure chest! Do you open it?";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='openGood()'>Yes</button><button type='button' onclick='denyChest()'>No</button>";	
 		}
@@ -315,7 +315,7 @@ function crawl2(){
 			if(mimicDevice == 1){
 				document.getElementById("itemMessage").innerHTML="<b>Your mimic detector is beeping furiously!</b>";
 			}
-			document.getElementById("picture").innerHTML="<img src='chest.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/chest.png'>";
 			document.getElementById("textBox").innerHTML="You've come across a treasure chest! Do you open it?";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='openMimic()'>Yes</button><button type='button' onclick='denyChest()'>No</button>";	
 		}
@@ -331,7 +331,7 @@ function crawl2(){
 		else{
 			clearEventFlags();
 			event7 = 1;
-			document.getElementById("picture").innerHTML="<img src='mascot.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/mascot.png'>";
 			document.getElementById("textBox").innerHTML="The game's adorable little mascot appears!<br><b>Ok, I spent of a lot of time running around, but this potion isn't water, and there's no way it's poison!</b>";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='drinkPotion2()'>Drink it</button><button type='button' onclick='noDrink2()'>Don't drink it</button><button type='button' onclick='youMonster2()'>Punch mascot</button> ";
 		}	
@@ -349,14 +349,14 @@ function crawl2(){
 			clearEventFlags();
 			event8 = 1;
 		if (swordflag == 1 || swordflag2 == 1){
-			document.getElementById("picture").innerHTML="<img src='sword.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/sword.png'>";
 			document.getElementById("textBox").innerHTML="You check for any more swords in the sword spot. To your dismay, no more swords have appeared.";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";	
 		}
 		else{
 		swordflag = 1;
                 statsToCookie();
-		document.getElementById("picture").innerHTML="<img src='sword.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/sword.png'>";
 		document.getElementById("textBox").innerHTML="You've found a sword lying in the corner! The blade is rusted and frail, so you don't want to hit anything with it.<br>The sword eminates a magical aura however...<br>Unknown sword aquired!";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -378,7 +378,7 @@ function crawl2(){
                 eName = "Mud Golem";
                 eScore = 10;
                 document.getElementById("tStats").innerHTML=eName + "'s Health : " + eHealth + " ";
-		document.getElementById("picture").innerHTML="<img src='mudgolem.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/mudgolem.png'>";
 		document.getElementById("textBox").innerHTML="A Mud Golem appears! He looks hefty, but how much damage can mud do?";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='fight()'>Fight!</button><button type='button' onclick='flee()'>Flee!</button>";
 		}	
@@ -390,7 +390,7 @@ function crawl2(){
 		if(RNGstat == 1){
 			health-= 2;
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>You don't look where you're going and smack face-first into a wall<br>You take 2 damage.";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 			if( health <= 0){
@@ -403,7 +403,7 @@ function crawl2(){
 			score+=2;
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>You find it suddenly easier to carry your equipment.<br>You gain 2 strength and score.";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -413,7 +413,7 @@ function crawl2(){
 			score+=2;
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>You find a spellbook on the ground and breifly flip through it before it vanishes.<br>You gain 2 max mana and 2 score.";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -421,7 +421,7 @@ function crawl2(){
 			strength-=2;
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>Something moves in the corner of your eye. You freak out for a second, before seeing it's only a mouse.<br>You feel like a wuss.<br>You lose 2 strength";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -432,7 +432,7 @@ function crawl2(){
 			}
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>You find a small flask of health potion and drink it.<br>You regain 6 hit points.";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -441,7 +441,7 @@ function crawl2(){
 			score+=2;
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>A dart trap is sprung! You instinctively tumble to the side.<br>You gain 2 dodge and score";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -449,7 +449,7 @@ function crawl2(){
 			health = health - 4;
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>A dart trap is sprung! Unfortinaly you only notice when they hit you in the leg.<br>You lose 4 health";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 			if( health <= 0){
@@ -461,7 +461,7 @@ function crawl2(){
 		if(RNGstat == 8){
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>You remember a jaunty tune from the local inn, but now it's stuck in your head.<br>Crap.";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -469,7 +469,7 @@ function crawl2(){
 			score += 10;
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>You step on a pressure plate! Instead of a trap, a wall panel opens revealing a solid gold bar. Neat!<br>You gain 10 score!";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -479,7 +479,7 @@ function crawl2(){
 			strength+= 2;
 			document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 			document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-			document.getElementById("picture").innerHTML="<img src='empty.png'>";
+			document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 			document.getElementById("textBox").innerHTML="You wander the halls.<br>You find a potion labled 'Manly Man's Tonic'.<br>You're pretty sure it was just water, but you feel buff anyway.<br>You gained 2 dodge, strength, and 4 score.";
 			document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 		}
@@ -820,7 +820,7 @@ function enemyTurn(){
 //Enemy is dead!
 function enemyDead(){
         score += eScore;
-	document.getElementById("picture").innerHTML="<img src='empty.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/empty.png'>";
 	document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 	document.getElementById("textBox").innerHTML="The " + eName + " is defeated!<br>You gained " + eScore + " points!";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Finally!</button>";
@@ -837,7 +837,7 @@ function playerDead2(){
 function openIron(){
 	enchantedIron = 1;
 	statsToCookie();
-	document.getElementById("picture").innerHTML="<img src='iron.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/iron.png'>";
 	document.getElementById("textBox").innerHTML="You open the chest, revealing...<br><b>A bar of magical iron!</b><br>You're not sure what to do with it, but you hang on to it anyway.";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Uh, ok?</button>";
 }
@@ -851,12 +851,12 @@ function openGood(){
 					health = healthCap;	
 				}
 				document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : 			" + strength + " | Dodge : " + dodge + " ";
-				document.getElementById("picture").innerHTML="<img src='potion.png'>";
+				document.getElementById("picture").innerHTML="<img src='Images/potion.png'>";
 				document.getElementById("textBox").innerHTML="You open the chest, revealing a bottle of 'Doctor Hababbit's Pretty Good Health Potion'<br>You chug it, despite it's terrible name.<br>You have regained 30 health points.";
 				document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Continue crawling</button>";
 			}
 			if(itemRoll >=51 && itemRoll <=75){
-				document.getElementById("picture").innerHTML="<img src='chestEmpty.png'>";
+				document.getElementById("picture").innerHTML="<img src='Images/chestEmpty.png'>";
 				document.getElementById("textBox").innerHTML="You open the chest, and magical dust shoots into your face!<br>No, wait. That's just normal dust. The chest is empty.";
 				document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Continue crawling</button>";
 			}
@@ -870,20 +870,20 @@ function openGood(){
 				score += 5;
 				document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
 				document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : 			" + strength + " | Dodge : " + dodge + " ";
-				document.getElementById("picture").innerHTML="<img src='statbooster.png'>";
+				document.getElementById("picture").innerHTML="<img src='Images/statbooster.png'>";
 				document.getElementById("textBox").innerHTML="You open the chest, revealing a statbooster potion, with a +1 scrawled on it's label.<br>You drink it, recieving +2 in all stats and 5 points in score!";
 				document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Continue crawling</button>";
 			}
 			if(itemRoll >= 91 && itemRoll <=100){
 				if (mimicDevice==1){
-					document.getElementById("picture").innerHTML="<img src='chestEmpty.png'>";
+					document.getElementById("picture").innerHTML="<img src='Images/chestEmpty.png'>";
 					document.getElementById("textBox").innerHTML="You open the chest, and magical dust shoots into your face!<br>No, wait. That's just normal dust. The chest is empty.";
 					document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Continue crawling</button>"
 				}
 				else{
 					mimicDevice = 1;
 					statsToCookie();
-					document.getElementById("picture").innerHTML="<img src='mimicdetector.png'>";
+					document.getElementById("picture").innerHTML="<img src='Images/mimicdetector.png'>";
 					document.getElementById("textBox").innerHTML="You open the chest, revealing a strange mechanical box with a speaker. There's a label on the back.<br>It reads : 'Mimic Detector V3 : because mimics are a load of crap!'<br>You take the thing with you.";
 					document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Continue crawling</button>"
 				}
@@ -897,7 +897,7 @@ function openMimic(){
                 eName = "Mimic";
                 eScore = 10;
                 document.getElementById("tStats").innerHTML=eName + "'s Health : " + eHealth + " ";
-		document.getElementById("picture").innerHTML="<img src='Mimic.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/Mimic.png'>";
 		document.getElementById("textBox").innerHTML="The chest opens, revealing teeth and a tongue? The chest was a mimic! No getting out of this fight!";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='fight()'>Fight!</button>";
 	
@@ -935,7 +935,7 @@ function drinkPotion2(){
 		health = healthCap;
 		mana = manaCap;
 		document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-		document.getElementById("picture").innerHTML="<img src='mascothappy.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/mascothappy.png'>";
 		document.getElementById("textBox").innerHTML="You drink the potion. It was a full restore potion!<br>Your health and mana have been refilled!<br><b>See, I told you the potions were better! I'll try to find another.</b>";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 	}
@@ -944,7 +944,7 @@ function drinkPotion2(){
 		if(health > healthCap){
 			health = healthCap;
 		}
-		document.getElementById("picture").innerHTML="<img src='mascothappy.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/mascothappy.png'>";
 		document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
 		document.getElementById("textBox").innerHTML="You chug the potion down. It's a normal health potion.<br>You are healed for 15 points<br><br><b>Not bad, but I can probably do better than that, now.</b>";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
@@ -955,7 +955,7 @@ function drinkPotion2(){
 			health = healthCap;
 		}
 		document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
-		document.getElementById("picture").innerHTML="<img src='mascothappy.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/mascothappy.png'>";
 		document.getElementById("textBox").innerHTML="You chug the potion down. It tastes a bit better than the normal health potions.<br>You are healed for 30 points!<br><b>Allright! Try not to get yourself killed, sir!</b>";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 	}
@@ -967,14 +967,14 @@ function drinkPotion2(){
 		strength+=2;
 		dodge+=2;
 		score+=5;
-		document.getElementById("picture").innerHTML="<img src='mascothappy.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/mascothappy.png'>";
 		document.getElementById("stats").innerHTML="Health : " + health + "/" + healthCap + " | Mana : " + mana +  "/" + manaCap + " | Strength : " + strength + " | Dodge : " + dodge + " ";
 		document.getElementById("textBox").innerHTML="You chug the potion down. You feel better overall!<br>All stats gain two points and you gain 5 score!<br><br><b>Wow, even that potion was better! I'll keep looking around, this place is great!</b>";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling</button>";
 	}
 	if (Potion2==100){
 		document.getElementById("textBox").style.background="#C00";
-		document.getElementById("picture").innerHTML="<img src='mascotdead.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/mascotdead.png'>";
 		document.getElementById("textBox").innerHTML="You chug the potion down.<br><b>Well, unless some jerk hard-coded a 1% chance of poison into the game, but what are the odds of-</b><br>Your senses deafen as that was, indeed, poison. You have perished.";
 		document.getElementById("buttonBar").innerHTML="<button type='button' onclick='startGame()'>Retry?</button>";
 	}
@@ -982,7 +982,7 @@ function drinkPotion2(){
 
 function noDrink2(){
 	if(ringCount >= 10){
-            document.getElementById("picture").innerHTML="<img src='mascotsad.png'>";
+            document.getElementById("picture").innerHTML="<img src='Images/mascotsad.png'>";
 			document.getElementById("textBox").innerHTML="You inform the mascot that you don't want to take chances drinking random potions.<br><b>B-but I even made sure it was...um...I guess you have a point...</b><br>The mascot leaves, dropping a ring.<br>It is a ring of shame. A pity you already have 10 rings, though.<br>Jerk.";
             document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling...</button>";
         }
@@ -990,7 +990,7 @@ function noDrink2(){
 	ringCount++;
 	shameRing++;
 	statsToCookie();
-	document.getElementById("picture").innerHTML="<img src='mascotsad.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/mascotsad.png'>";
 	document.getElementById("textBox").innerHTML="You inform the mascot that you don't want to take chances drinking random potions.<br><b>B-but I even made sure it was...um...I guess you have a point...</b><br>The mascot leaves, dropping a ring.<br>You are now wearing a ring of shame. It does nothing, and totally takes up a ring slot.<br>Jerk.";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='crawl2()'>Keep crawling...</button>";
 		}
@@ -1003,7 +1003,7 @@ function youMonster2(){
 
 function mascotDeath2(){
 	document.getElementById("textBox").style.background="#C00";
-	document.getElementById("picture").innerHTML="<img src='mascotangrydead.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/mascotangrydead.png'>";
 	document.getElementById("textBox").innerHTML="Suprise! You've sliced in half by his claws.<br>Was it really too much to ask to just drink the potion?";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='startGame()'>Retry?</button>";
 }
@@ -1012,7 +1012,7 @@ function swordTiamat2(){
         eHealth = (eHealth * 0.75);
 	eAttack = (eAttack * 0.75);
 	document.getElementById("tStats").innerHTML="Tiamat's Health : " + eHealth + " ";
-	document.getElementById("picture").innerHTML="<img src='tiamat2old.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/tiamat2old.png'>";
 	document.getElementById("textBox").innerHTML="You pull out the old sword and point it at Tiamat!<br>The sword shoots out a faint blue energy. Tiamat's stats are lowered by 1/4th!<br><b>Not bad, but I doubt that little trick will save you here.</b>";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='fightTiamat2()'>Well, it's something.</button>";
 }
@@ -1021,7 +1021,7 @@ function swordTiamat3(){
         eHealth = eHealth / 2;
 	eAttack = eAttack / 2;
 	document.getElementById("tStats").innerHTML="Tiamat's Health : " + eHealth + " ";
-	document.getElementById("picture").innerHTML="<img src='tiamat2new.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/tiamat2new.png'>";
 	document.getElementById("textBox").innerHTML="You pull out the Cruel Longsword of the Hero and point it at Tiamat.<br>The improved sword emits a far more brilliant light!<br><b>WHAT? YOU CAN IMPROVE THAT OLD THING? CRAP!</b><br>Tiamat's stats are halved!";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='fightTiamat2()'>Let's do this!</button>";
 }
@@ -1031,7 +1031,7 @@ function fightTiamat2(){
 	if(mana > manaCap){
 	mana = manaCap;	
 	}
-	document.getElementById("picture").innerHTML="<img src='tiamat2.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/tiamat2.png'>";
 	document.getElementById("textBox").innerHTML="Tiamat is looming above you, looking quite agitated.";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='enemyAttack()'>Attack!</button><button type='button' onclick='enemyMagic()'>Use magic!</button>";
 	if(fightflag == 0){
@@ -1084,7 +1084,7 @@ function mascotAttack(){
 
 function playerDead3(){
 	document.getElementById("textBox").style.background="#C00";
-        document.getElementById("picture").innerHTML="<img src='tiamat2dead.png'>";
+        document.getElementById("picture").innerHTML="<img src='Images/tiamat2dead.png'>";
 	document.getElementById("youtube").innerHTML="<iframe width='250' height='188' src='http://www.youtube.com/embed/rsDg-fOMLbE?autoplay=1' frameborder='0' autohide='1'></iframe>";
 	document.getElementById("textBox").innerHTML="You crumble under the might of Tiamat!<br><b>AND STAY OUT. I'M SICK OF YOU PEOPLE.</b>";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='startGame()'>Retry?</button>";
@@ -1092,26 +1092,26 @@ function playerDead3(){
 
 function tiamatDead2(){
 	document.getElementById("youtube").innerHTML="<iframe width='250' height='188' src='http://www.youtube.com/embed/uYAYvkzNl0o?autoplay=1' frameborder='0' autohide='1'></iframe>";
-	document.getElementById("picture").innerHTML="<img src='tiamat2defeated.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/tiamat2defeated.png'>";
         document.getElementById("textBox").innerHTML="Your mighty blow fells Tiamat!<br><b>THIS IS...IMPOSSIBLE! YOU CHEATED, I KNOW IT, I KNOW-</b><br>The god dragon evaporates as this dungeon starts to crumble.<br>You quickly rush out of the dungeon through a newly-formed exit.";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='tiamatDead2Second()'>Proceed</button>";
 }
 
 function tiamatDead2Second(){
-	document.getElementById("picture").innerHTML="<img src='villagers.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/villagers.png'>";
         document.getElementById("textBox").innerHTML="You escape the crumbling ruins as a crowd of villagers from the nearby town run out of their houses<br>and lift you in the air in celebration! You are carried to the local Inn, where a feast has been prepared in your honor."
         document.getElementById("buttonBar").innerHTML="<button type='button' onclick='tiamatDead2Third()'>Proceed</button>";
 }
 
 function tiamatDead2Third(){
-	document.getElementById("picture").innerHTML="<img src='bagofcash.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/bagofcash.png'>";
         document.getElementById("textBox").innerHTML="As you are feasting, adorable game mascot appears, carring a very large bag.<br><b>Hey! Sir! You forgot this when you were running out of the dungeon!</b><br>He drops the large bag on the table, so you decide to open it..."
         document.getElementById("buttonBar").innerHTML="<button type='button' onclick='tiamatDead2Fourth()'>Proceed</button>";
 }
 
 function tiamatDead2Fourth(){
         score += 9999999999999;
-		document.getElementById("picture").innerHTML="<img src='gold.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/gold.png'>";
         document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
         document.getElementById("textBox").innerHTML="<b>IT'S ENTIRELY FULL OF GOLD!</b><br>Your score has gone up by, holy crap, I can't even count, my god.<br>You retire from adventuring, having more than enough money to last you 5 lifetimes.<br><b>YOU'VE WON!</b>"
         document.getElementById("buttonBar").innerHTML="<button type='button' onclick='startGame()'>Play Again?</button>";
@@ -1119,26 +1119,26 @@ function tiamatDead2Fourth(){
 
 function tiamatDead3(){
 	document.getElementById("youtube").innerHTML="<iframe width='250' height='188' src='http://www.youtube.com/embed/kX3IA3Nop3o?autoplay=1' frameborder='0' autohide='1'></iframe>";
-	document.getElementById("picture").innerHTML="<img src='tiamat2defeated.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/tiamat2defeated.png'>";
         document.getElementById("textBox").innerHTML="Mascot's last blow stops Tiamat dead in her tracks. She tries to strike again, but collapses!<br><b>WH-WHAT? BEATEN BY THE GAME'S MASCOT? ARE YOU KIDDING MEEEE-</b><br>Tiamat's body suddenly evaporates, causing the dungeon to begin to crumble!<br>You and mascot rush towards a newly-formed entrance.";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='tiamatDead3Second()'>Proceed</button>";
 }
 
 function tiamatDead3Second(){
-	document.getElementById("picture").innerHTML="<img src='villagersmascot.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/villagersmascot.png'>";
         document.getElementById("textBox").innerHTML="As you run out of the dungeon, villagers from the nearby town rush out in celebration.<br>However, instead of praising you, they instead praise Adorable Game Mascot! He is lifted up and lead back to town for a feast!<br>You stare in dismay as you are approached by an architect.";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='tiamatDead3Third()'>Proceed</button>";
 }
 
 function tiamatDead3Third(){
-	document.getElementById("picture").innerHTML="<img src='architect.png'>";
+	document.getElementById("picture").innerHTML="<img src='Images/architect.png'>";
         document.getElementById("textBox").innerHTML="<b>A moment of your time sir...<br>That dungeon was the result of years of work within my family, and I won't take it's destruction lightly.<br>You need to rectify this, or else I will contact the local authorities.</b><br>He hands you a piece of paper...";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='tiamatDead3Fourth()'>Proceed</button>";
 }
 
 function tiamatDead3Fourth(){
         score -= 99999999999;
-		document.getElementById("picture").innerHTML="<img src='bill.png'>";
+		document.getElementById("picture").innerHTML="<img src='Images/bill.png'>";
         document.getElementById("score").innerHTML="Score : " + score + " | Level : " + level + " ";
         document.getElementById("textBox").innerHTML="Oh my god, it's a bill!<br>A HUGE bill! You're going to have to adventure for the rest of your life if you have any hopes of paying this off!<br>You curse loudly and swear to all sorts of gods that one day you will punch that damn mascot!";
 	document.getElementById("buttonBar").innerHTML="<button type='button' onclick='startGame()'>Try...again?</button>";
