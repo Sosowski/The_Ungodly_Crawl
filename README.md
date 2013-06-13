@@ -9,10 +9,3 @@ it can get repetitive due to it's somewhat low amount of events.
 
 Assemble all the files into one folder, and launch index.html in your browser of choice. Nothing special to it. The game's
 instructions are fully detailed within the page.
-
-## Current Issues
-
-Documents are largely unorganized at the current moment. Seperating them into their own folders requires editing all the
-various calls in the javascript, which will be done at some point.
-
-There are no known issues with gameplay as of yet.
